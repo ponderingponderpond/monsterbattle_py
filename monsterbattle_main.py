@@ -38,10 +38,10 @@ def monsterBattle():  #this defines a function
     
     while selectedMonsterHealth > 0:
         if playerMoraleThrow > 1:
-            actualDotDamage = randint(1, 5) #putting the randint() in the "while" loop continually generates new numbers instead of just repeating the one that was picked outside of it (as I had it before).
-            damageDone += actualDotDamage #+= does the same thing as damageDone = damageDone + standardDot, since damageDone is used both as a variable and a value. This is an "augmented assignment operator"
-            selectedMonsterHealth -= actualDotDamage
-            print(f'You hit the {selectedMonsterName} for {actualDotDamage} reducing its health to {selectedMonsterHealth}')
+            actualDamageDealt = randint(1, 5) #putting the randint() in the "while" loop continually generates new numbers instead of just repeating the one that was picked outside of it (as I had it before).
+            damageDone += actualDamageDealt #+= does the same thing as damageDone = damageDone + standardDot, since damageDone is used both as a variable and a value. This is an "augmented assignment operator"
+            selectedMonsterHealth -= actualDamageDealt
+            print(f'You hit the {selectedMonsterName} for {actualDamageDealt} reducing its health to {selectedMonsterHealth}')
             if selectedMonsterHealth <= 0:
                 print(f'You have dealt {damageDone} damage overall.') 
                 cheers = ['Huzza!', 'Glorious!', 'Fantastic!', 'You can do better, though.', 'Honestly, it wasn\'t that hard.', 'Gee golly, aren\'t you strong...']
