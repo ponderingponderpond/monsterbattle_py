@@ -2,7 +2,7 @@
 from random import randint #importing the specific means you can just call randint without using random.randint everytime
 from random import choice
 
-#monsterPool
+#monsterPool - these are dictonaries with several 'key': value pairs
 m_skeletonWarrior = {'health': 20, 'name': 'Skeleton Warrior', 'article': 'a'}
 m_orcWarrior = {'health': 27, 'name': 'Orc Warrior', 'article': 'an'}
 m_wrigglingFinger = {'health': 3, 'name': 'Wriggling Finger', 'article': 'a'}
@@ -33,13 +33,12 @@ def monsterBattle():  #this defines a function
     else:
         print('All you had to do was type \"roll\"...')
     
-    actualDotDamage = randint(1, 5)
-
     global damageDone #overrides the global variable for both local and global scope
     damageDone = 0 #local variable because it's within a defined function
     
     while selectedMonsterHealth > 0:
         if playerMoraleThrow > 1:
+            actualDotDamage = randint(1, 5) #putting the randint() in the "while" loop continually generates new numbers instead of just repeating the one that was picked outside of it (as I had it before).
             damageDone += actualDotDamage #+= does the same thing as damageDone = damageDone + standardDot, since damageDone is used both as a variable and a value. This is an "augmented assignment operator"
             selectedMonsterHealth -= actualDotDamage
             print(f'You hit the {selectedMonsterName} for {actualDotDamage} reducing its health to {selectedMonsterHealth}')
