@@ -9,7 +9,7 @@ m_wrigglingFinger = {'health': 3, 'name': 'Wriggling Finger', 'article': 'a'}
 
 monsterPool = [m_orcWarrior, m_skeletonWarrior, m_wrigglingFinger]
 
-#locationPool
+#locationPool - unused so far
 l_forrestPath = {'combatPlayerBonus': 1}
 
 #Global Variable, just to illustrate how those work, really.
