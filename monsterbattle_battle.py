@@ -12,10 +12,10 @@ def monsterBattle():  #this defines a function
     selectedMonsterName = selectedMonster.get('name')
     selectedMonsterArticle = selectedMonster.get('article')
     selectedMonsterHealth = selectedMonster.get('health')
-    #Printing multiline text using ''' Stuff ''''
+    #Printing multiline text using ''' Stuff ''''; "playerName" is undefined, because it takes the value from the monsterbattle_main variable based on user input, as it's called.
     print(f'''
     You have encountered {selectedMonsterArticle} {selectedMonsterName}. Get ready to fight. It has {selectedMonsterHealth} health.
-    Do you posess the will to fight this {selectedMonsterName}, {playerName}? 
+    Do you posess the will to fight this {selectedMonsterName}, {playerName}?
     Roll the dice and learn your fate!
     ''') #the "f" allows to use {} to call on variables instead of needing to go the long way via + [] +
     playerMoraleThrowCheck = input()
