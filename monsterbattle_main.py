@@ -24,7 +24,7 @@ def monsterBattle():  #this defines a function
     print(f'You have encountered {selectedMonsterArticle} {selectedMonsterName}. Get ready to fight. It has {selectedMonsterHealth} health.') #the "f" allows to use {} to call on variables instead of needing to go the long way via + [] +
     print(f'Do you posess the will to fight this {selectedMonsterName}, {playerName}? Roll the dice and learn your fate!')
     playerMoraleThrowCheck = input()
-    if playerMoraleThrowCheck == 'roll':
+    if playerMoraleThrowCheck.lower() == 'roll': #the .lower() converts any input like ROLL to roll, so the input is valid since it expects lower case "roll"
         playerMoraleThrow = randint(1, 6)
         if playerMoraleThrow > 1:
             print('You have the will to fight and engage the enemy!')
@@ -54,19 +54,22 @@ def monsterBattle():  #this defines a function
 
 print('Who are you?')
 playerName = input()
-print(f'{playerName}, eh? How odd. Well, {playerName}, would you like to go on an adventure?')
+if len(playerName) > 3:
+    print(f'{playerName}, eh? How odd. Well, {playerName}, would you like to go on an adventure?')
+elif len(playerName) < 3:
+    print(f'{playerName}? That\'s kind of short, isn\'t it? Fine. Want to have an adventure?')
 
 goForth = input()
-if goForth == 'yes':
+if goForth.lower() == 'yes':
     print('Let\'s roll the dice and see what happens, shall we? (Hint: type \"roll\")')
     playerRoll = input()
-    if playerRoll == 'roll':
+    if playerRoll.lower() == 'roll':
         playerDiceRoll = randint(1, 6)
         print ('You have rolled a', playerDiceRoll, '.')
         if playerDiceRoll >= 2:  
             print(f'You hear something suspicious. Do you wish to investigate, {playerName}?')
             playerChoice = input()
-            if playerChoice == 'yes':           
+            if playerChoice.lower() == 'yes':           
                 monsterBattle() #this calls/executes the function
             else:
                 print(f'{playerName} is a little coward, eh?')
