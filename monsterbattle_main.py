@@ -12,7 +12,8 @@ monsterPool = [m_orcWarrior, m_skeletonWarrior, m_wrigglingFinger]
 #locationPool
 l_forrestPath = {'combatPlayerBonus': 1}
 
-damageDone = 3 #global variable
+#Global Variable, just to illustrate how those work, really.
+damageDone = 3 
 
 def monsterBattle():  #this defines a function
     #Building the variable contents for the monster based on the selection in "monsterPool"
