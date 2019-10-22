@@ -18,7 +18,7 @@ def monsterBattle():  #this defines a function
     Do you posess the will to fight this {selectedMonsterName}, {playerName}?
     Roll the dice and learn your fate!
     ''') #the "f" allows to use {} to call on variables instead of needing to go the long way via + [] +
-    playerMoraleThrowCheck = input()
+    playerMoraleThrowCheck = input('(Hint: type \"roll\") ')
     if playerMoraleThrowCheck.lower() == 'roll': #the .lower() converts any input like ROLL to roll, so the input is valid since it expects lower case "roll"
         playerMoraleThrow = randint(1, 6)
         if playerMoraleThrow > 1:

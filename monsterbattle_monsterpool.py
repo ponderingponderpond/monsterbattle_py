@@ -6,4 +6,4 @@ m_strangeHyena = {'health': 15, 'name': 'Strange Hyena', 'article': 'a'}
 m_giantAnt = {'health': 35, 'name': 'Giant Ant', 'article': 'a'}
 m_singingDuck = {'health': 7, 'name': 'Singing Duck', 'article': 'a'}
 
-monsterPool = [m_orcWarrior, m_skeletonWarrior, m_wrigglingFinger, m_singingDuck, m_strangeHyena, m_giantAnt]
+monsterPool = [m_orcWarrior, m_skeletonWarrior, m_wrigglingFinger, m_singingDuck, m_strangeHyena, m_giantAnt] #This is just a list which can be chosen from. There's probably a sexier way of doing the same thing.
