@@ -7,7 +7,7 @@ import monsterbattle_battle as mbtl_btl #Not sure if I use from if I can pass on
 #locationPool - unused so far
 l_forrestPath = {'combatPlayerBonus': 1}
 
-gameLoopCount = 1
+gameLoopCount = 0
 gameRun = True
 
 #Let's have our player create his name as global variable to be used in everything subsequent from here on out.
@@ -60,7 +60,9 @@ while gameRun == True:
     else:
         print('Fine. Spoilsport.')
         userReplayChoiceRequest = True
-    gameLoopCount = gameLoopCount + 1
+    
+    gameLoopCount = gameLoopCount + 1 #The game is completed here, so one is added to the gameLoopCount
+    
     if userReplayChoiceRequest == True:
         userReplayChoiceInput = input (f'Want to try again, {playerName}? ')
         if userReplayChoiceInput.lower() == 'yes':
@@ -68,5 +70,5 @@ while gameRun == True:
         else:
             print(f'God, you are no fun, are you, {playerName}?')
             print(f'You have done this {gameLoopCount} times.')
-            gameRun = False
+            gameRun = False #Ends the game
 
